@@ -1,0 +1,4 @@
+Zum starten der Anwendung
+Rechtsklick auf Projekt -> Run As -> Spring Boot App
+-> mit dem Link im Browser öffnen
+http://localhost:8082/beanmenu.html

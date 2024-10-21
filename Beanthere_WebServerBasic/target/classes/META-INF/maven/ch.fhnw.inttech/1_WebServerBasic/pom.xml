@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Deklaration der Projektdatei und Schema-Informationen -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<!-- Maven-Modellversion -->
+	<modelVersion>4.0.0</modelVersion>
+	
+	<!-- Elternprojekt-Spezifikationen (Spring Boot Starter Parent) -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.5.RELEASE</version>
+		<relativePath/> <!-- Pfad zum Elternprojekt -->
+	</parent>
+	
+	<!-- Projekt-Informationen -->
+	<groupId>ch.fhnw.inttech</groupId>
+	<artifactId>1_WebServerBasic</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>1_WebServerBasic</name>
+	<description>Eine Spring Applikation welche einen einfachen HTTP-Server started</description>
+
+	<!-- Projekteigenschaften -->
+	<properties>
+		<java.version>11</java.version> <!-- Festlegen der Java-Version -->
+	</properties>
+
+	<!-- Abhängigkeiten -->
+	<dependencies>
+		<!-- Spring Boot Starter Web für Web-Anwendungen -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- Spring Boot Starter Data JPA für Datenbankanwendungen -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		<!-- H2-Datenbank (In-Memory) -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope> <!-- Nur zur Laufzeit benötigt -->
+		</dependency>
+		
+		<!-- Spring Boot Starter Test für Unit-Tests -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope> <!-- Nur für Testzwecke -->
+			<exclusions>
+				<!-- Ausschließen der JUnit Vintage Engine -->
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<!-- Baukonfiguration -->
+	<build>
+		<plugins>
+			<!-- Spring Boot Maven Plugin für einfache Ausführung -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

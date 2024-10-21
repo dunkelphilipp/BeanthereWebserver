@@ -1,0 +1,150 @@
+/* Grundlegender Body */
+body {
+    background-color: rgb(255, 255, 255); /* weiss */
+    color: #555; /* dunkelgrau Text */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header- und Footer-Settings*/
+header, footer {
+    background-color: rgb(255, 255, 255); /* weiss */
+    padding: 10px 20px;
+    text-align: center; 
+}
+
+/* Flexbox für den Header-Container */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Spezifische Header-Elemente */
+.header-logo {
+    margin-right: auto;
+}
+
+header img {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+h1 {
+    display: inline-block; 
+    color: rgb(246, 177, 244); /* grelles Lila */
+    font-family: 'Lucida Grande';
+    flex-grow: 2; /* Fürs Logo */
+}
+
+/* Styling für die Hs */
+h2, h3 {
+    color: rgb(98, 146, 165); /* sanftes Blau */
+    font-family: 'Lucida Sans Regular';
+}
+
+/* Link-Stil */
+a {
+    color: rgb(207, 166, 104); /* Orange für Linkfarbe */
+}
+
+/* Container für Inhalte */
+.content {
+    background-color: rgb(255, 255, 255); /* weiss */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Warenkorb-Stile */
+.warenkorb-link {
+    float: right;
+    margin-left: auto;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.caption-container {
+	position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.caption-container h2 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.caption-container a {
+   position: fixed; /* Fixierte Position */
+    right: 20px; /* Distanz von rechts */
+    top: 155px; /* Distanz von oben */
+    z-index: 1000; /* Sicher, dass es von oben ist*/
+}
+
+
+/* Stile für Total */
+.total {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.total h2, .total p {
+    margin-right: 5px;
+}
+
+/* Buttons */
+button {
+    background-color: #b7d7e8; /* blasses Blau */
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(205, 170, 239); /* ein helleres Violett beim Hover */
+}
+
+/* Tabellen */
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: none;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Anpassungen für Spaltenbreiten */
+th:first-child, td:first-child {
+    width: 600px;
+}
+
+th:last-child, td:last-child {
+    width: 100px;
+}
+
+caption {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.caption-container{
+
+	text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+	
+}

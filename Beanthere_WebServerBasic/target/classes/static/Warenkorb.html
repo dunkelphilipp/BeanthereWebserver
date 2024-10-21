@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Metadaten und Titel der Webseite -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warenkorb</title>
+    <!-- Verknüpfung mit externem Stylesheet -->
+    <link rel="stylesheet" href="css/BeanStyle.css">
+    <!-- Verknüpfung mit Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Einbindung von jQuery-Bibliothek -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Einbindung von benutzerdefiniertem JavaScript -->
+    <script src="js/cart.js"></script>
+</head>
+<body>
+    <!-- Kopfbereich der Webseite -->
+    <header>
+        <!-- Link zurück zum Hauptmenü -->
+        <a href="beanmenu.html">
+            <!-- Logo des Cafés -->
+            <img src="Logobeanthere.png" alt="Logo" class="header-logo" width="250" height="150">
+            <!-- Hauptüberschrift der Seite -->
+            <h1>Warenkorb</h1>
+        </a>
+    </header>
+    
+    <!-- Hauptinhalt der Seite -->
+    <main>
+        <!-- Formular für die Menüauswahl -->
+        <form id="menuForm">
+            <!-- Tabelle für die Warenkorb-Artikel -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Artikel</th>
+                        <th>Anzahl</th>
+                        <th>Gesamt CHF</th>
+                    </tr>
+                </thead>
+                <tbody id="cartItems">
+                    <!-- Ausgewählte Produkte werden hier eingefügt -->
+                </tbody>
+            </table>
+
+            <!-- Bereich für die Gesamtbetrag-Anzeige -->
+            <div class="total">
+                <h2>Gesamtbetrag CHF</h2>
+                <h2><p id="totalAmount" style="display: inline;">CHF 0.00</p></h2>
+            </div>
+
+            <!-- Abschnitt für die AGB Bestätigung -->
+            <div class="agb">
+                <input type="checkbox" id="agbCheck" required>
+                <label for="agbCheck">Ich habe die <a href="agb.html">AGB</a> gelesen und akzeptiere sie.</label>
+            </div> <br>
+            
+            <!-- Eingabefeld für die Tischnummer -->
+            <div class="tischnummer">
+                <label for="tischnummer">Tischnummer:</label>
+                <input type="text" id="tischnummer" name="tischnummer" required>
+            </div> <br>
+            
+            <!-- Bestellbutton -->
+            <button type="button" onclick="submitOrder()">Bestellen</button>
+        </form>
+    </main>
+
+    <!-- Fußbereich der Webseite -->
+    <footer>
+        <p>Für besondere Anfragen hilft Ihnen gerne unser Personal.</p>
+        <p><a href="Impressum.html">Impressum</a></p>
+    </footer>
+</body>
+</html>
